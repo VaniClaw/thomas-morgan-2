@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&family=Figtree:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; background: #1C1917; }
+html { scroll-behavior: smooth; background: #FAFAF8; }
 
 body {
-  font-family: 'Figtree', system-ui, sans-serif;
-  background: #1C1917;
-  color: #F5F0E8;
+  font-family: 'Outfit', system-ui, sans-serif;
+  background: #FAFAF8;
+  color: #1A1A1A;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
-::selection { background: #CA8A04; color: #1C1917; }
+::selection { background: #4A7C59; color: #FAFAF8; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -23,62 +23,12 @@ body {
   }
 }
 
-/* Floating label */
-.float-group { position: relative; }
-.float-group input,
-.float-group textarea,
-.float-group select {
-  width: 100%;
-  padding: 22px 16px 8px;
-  background: #2C2820;
-  border: 1px solid #3A3530;
-  border-radius: 10px;
-  color: #F5F0E8;
-  font-family: 'Figtree', sans-serif;
-  font-size: 15px;
-  outline: none;
-  transition: border-color 0.2s;
-}
-.float-group input:focus,
-.float-group textarea:focus,
-.float-group select:focus {
-  border-color: #CA8A04;
-}
-.float-group label {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 14px;
-  color: #9C9488;
-  pointer-events: none;
-  transition: all 0.2s ease;
-  font-family: 'Figtree', sans-serif;
-}
-.float-group textarea ~ label { top: 20px; transform: none; }
-.float-group input:focus ~ label,
-.float-group input:not(:placeholder-shown) ~ label,
-.float-group textarea:focus ~ label,
-.float-group textarea:not(:placeholder-shown) ~ label,
-.float-group select:focus ~ label,
-.float-group.has-value label {
-  top: 8px;
-  transform: none;
-  font-size: 11px;
-  color: #CA8A04;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-/* Gold ring animation on hero */
-@keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-.spin-slow { animation: spin-slow 20s linear infinite; }
-
 /* Scrollbar */
-::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: #1C1917; }
-::-webkit-scrollbar-thumb { background: #3A3530; border-radius: 2px; }
-::-webkit-scrollbar-thumb:hover { background: #CA8A04; }
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #FAFAF8; }
+::-webkit-scrollbar-thumb { background: #D4D3CE; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #4A7C59; }
+
+/* Horizontal scroll hide scrollbar */
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
