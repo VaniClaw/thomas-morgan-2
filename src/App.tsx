@@ -590,30 +590,32 @@ function Kontakt() {
                 Rufen Sie einfach an — wir sind für Sie da.
               </p>
 
-              <a
-                href="tel:015785767550"
-                className="mt-8 inline-flex items-center gap-3 font-['Cabin'] text-sm uppercase
-                           tracking-wider bg-[#F5EFE6] text-[#2C1F14] px-8 py-4
-                           hover:bg-[#5C7A3E] hover:text-[#F5EFE6] transition-colors duration-300 cursor-pointer"
-              >
-                <Phone size={15} />
-                Jetzt anrufen
-              </a>
+              <div className="mt-10 flex flex-col sm:flex-row items-start gap-5">
+                <a
+                  href="tel:015785767550"
+                  className="inline-flex items-center gap-3 font-['Cabin'] text-sm uppercase
+                             tracking-wider bg-[#F5EFE6] text-[#2C1F14] px-8 py-4
+                             hover:bg-[#5C7A3E] hover:text-[#F5EFE6] transition-colors duration-300 cursor-pointer"
+                >
+                  <Phone size={15} />
+                  Jetzt anrufen
+                </a>
 
-              <a
-                href="#kontakt"
-                onClick={(e) => {
-                  e.preventDefault()
-                  const subject = encodeURIComponent('Anfrage über Website')
-                  window.location.href = `mailto:?subject=${subject}`
-                }}
-                className="mt-4 inline-flex items-center gap-3 font-['Cabin'] text-xs uppercase
-                           tracking-widest text-[#5C7A3E] border-b border-[#5C7A3E] pb-1
-                           hover:text-[#F5EFE6] hover:border-[#F5EFE6] transition-colors duration-200 cursor-pointer"
-              >
-                Kostenloses Angebot anfragen
-                <span className="text-base leading-none">→</span>
-              </a>
+                <a
+                  href="#kontakt"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    const subject = encodeURIComponent('Anfrage über Website')
+                    window.location.href = `mailto:?subject=${subject}`
+                  }}
+                  className="inline-flex items-center gap-3 font-['Cabin'] text-xs uppercase
+                             tracking-widest text-[#5C7A3E] border-b border-[#5C7A3E] pb-1 sm:mt-3
+                             hover:text-[#F5EFE6] hover:border-[#F5EFE6] transition-colors duration-200 cursor-pointer"
+                >
+                  Kostenloses Angebot anfragen
+                  <span className="text-base leading-none">→</span>
+                </a>
+              </div>
             </div>
           </Reveal>
 
