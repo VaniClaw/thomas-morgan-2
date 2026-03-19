@@ -149,7 +149,7 @@ function Navbar() {
   )
 }
 
-/* ── Hero — Full viewport, split left text / right 3D placeholder ─────── */
+/* ── Hero — Full viewport ────────────────────────────────────────────────── */
 function Hero() {
   return (
     <section
@@ -161,9 +161,8 @@ function Hero() {
         style={{ background: 'radial-gradient(ellipse 60% 70% at 20% 50%, rgba(202,138,4,0.05) 0%, transparent 65%)' }}
       />
 
-      <div className="flex-1 flex flex-col lg:flex-row" style={{ minHeight: '100vh' }}>
-        {/* LEFT — text column */}
-        <div className="flex flex-col justify-center px-8 md:px-16 lg:px-20 py-32 lg:py-0 lg:w-1/2 z-10">
+      <div className="flex-1 flex flex-col justify-center" style={{ minHeight: '100vh' }}>
+        <div className="flex flex-col justify-center px-8 md:px-16 lg:px-20 py-32 lg:py-0 z-10">
           <motion.p
             initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15, duration: 0.6 }}
@@ -273,28 +272,6 @@ function Hero() {
           </motion.div>
         </div>
 
-        {/* RIGHT — Spline 3D placeholder */}
-        <motion.div
-          initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 1.2 }}
-          id="spline-container"
-          className="lg:w-1/2 relative"
-          style={{
-            minHeight: '50vh',
-            background: SURFACE,
-            borderLeft: `1px solid ${BORDER}`,
-          }}
-        >
-          {/* Visual placeholder — replace with <Spline> component */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-4" style={{ opacity: 0.15 }}>
-            <TreePine size={80} color={GOLD} strokeWidth={0.8} />
-            <span style={{ ...SYNE, fontSize: '11px', letterSpacing: '0.3em', color: GOLD, textTransform: 'uppercase' }}>3D Scene</span>
-          </div>
-          {/* Subtle gradient overlay edge */}
-          <div className="absolute inset-y-0 left-0 w-24 pointer-events-none"
-            style={{ background: `linear-gradient(to right, ${BG}, transparent)` }}
-          />
-        </motion.div>
       </div>
     </section>
   )
