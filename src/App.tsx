@@ -684,15 +684,8 @@ function Footer() {
           Webdesign by <span className="text-[#5C7A3E]">Open Visual</span>
         </span>
         <div className="flex gap-6">
-          {['Impressum', 'Datenschutz'].map((l) => (
-            <a
-              key={l}
-              href="#"
-              className="font-['Cabin'] text-xs text-[#6B5D4F] hover:text-[#9B8E7F] transition-colors duration-200 cursor-pointer"
-            >
-              {l}
-            </a>
-          ))}
+          <a href="/impressum" className="font-['Cabin'] text-xs text-[#6B5D4F] hover:text-[#9B8E7F] transition-colors duration-200 cursor-pointer">Impressum</a>
+          <a href="/datenschutz" className="font-['Cabin'] text-xs text-[#6B5D4F] hover:text-[#9B8E7F] transition-colors duration-200 cursor-pointer">Datenschutz</a>
         </div>
       </div>
     </footer>
